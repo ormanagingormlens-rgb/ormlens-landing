@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORM Lens — Monitoraggio reputazionale</title>
+  <meta name="description" content="ORM Lens: individuiamo, analizziamo e documentiamo tutto ciò che il web dice di te.">
+  <link rel="icon" href="materials/logo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="logo">
+      <img src="materials/logo.svg" class="logo_image" alt="ORM Lens">
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li class="menu_button"><a href="#home" data-i18n="nav_home">Home</a></li>
+      <li class="menu_button"><a href="#problem" data-i18n="nav_problem">Problema</a></li>
+      <li class="menu_button"><a href="#solution" data-i18n="nav_solution">Soluzione</a></li>
+      <li class="menu_button"><a href="#pricing" data-i18n="nav_pricing">Prezzi</a></li>
+      <li class="menu_button"><a href="#contact" data-i18n="nav_contact">Contatti</a></li>
+    </ul>
+
+    <div class="nav_controls">
+      <button type="button" class="lang_switch" id="langSwitch" aria-label="Cambia lingua / Change language">
+        <span class="lang_option is-active" data-lang="it">IT</span>
+        <span class="lang_divider">/</span>
+        <span class="lang_option" data-lang="en">EN</span>
+      </button>
+      <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <div class="hero" id="home">
+    <div class="scan_grid" aria-hidden="true"></div>
+
+    <div class="left_column">
+      <p class="eyebrow reveal" data-i18n="hero_eyebrow">MONITORAGGIO REPUTAZIONALE</p>
+
+      <div class="title_name reveal">
+        <h1 class="name_1">ORM</h1>
+        <h1 class="name_2">LENS</h1>
+      </div>
+
+      <div class="description_label reveal">
+        <p class="description">
+          <span data-i18n="hero_line1">Una</span>
+          <span class="accent_word" data-i18n="hero_word1">LENTE</span>
+          <br>
+          <span data-i18n="hero_line2">sulla tua</span>
+          <span class="accent_word" data-i18n="hero_word2">REPUTAZIONE</span>
+        </p>
+        <p class="hero_sub" data-i18n="hero_sub">Individuiamo, analizziamo e documentiamo tutto ciò che il web dice di te, prima che sia il web a raccontare la tua storia al posto tuo.</p>
+        <a href="#problem" class="cta_button" data-i18n="hero_cta">Scopri come funziona</a>
+      </div>
+    </div>
+
+    <div class="right_column">
+      <div class="lens_frame reveal">
+        <div class="lens_ring ring_outer" aria-hidden="true"></div>
+        <div class="lens_ring ring_mid" aria-hidden="true"></div>
+        <div class="lens_sweep" aria-hidden="true"></div>
+        <img src="materials/logo.svg" class="logo_principal" alt="ORM Lens logo">
+        <span class="lens_tag" data-i18n="hero_status">STATO: ATTIVO</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="problem" id="problem">
+    <p class="eyebrow eyebrow_dark reveal">01 — <span data-i18n="problem_eyebrow">SEGNALE</span></p>
+    <h2 class="section_title reveal">PROBLEM</h2>
+
+    <div class="horizontal_section">
+      <div class="problem1 reveal">
+        <h3 class="exposure" data-i18n="problem_heading">ESPOSIZIONE</h3>
+        <p class="problem_description" data-i18n="problem_body">Una sola informazione inesatta, un articolo pubblicato senza il giusto contesto: basta poco perché una reputazione costruita in anni di lavoro venga messa in discussione. Anche quando i fatti dimostrano la verità, il web ricorda il titolo che ha fatto rumore, non la smentita arrivata dopo. Per questo proteggere la propria reputazione online è una necessità.</p>
+      </div>
+      <div class="problem2 reveal">
+        <img src="materials/news_problem.jpg" class="news_image" alt="Rassegna stampa">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOLUTION ============ -->
+  <section class="solution" id="solution">
+    <p class="eyebrow eyebrow_dark reveal">02 — <span data-i18n="solution_eyebrow">RISPOSTA</span></p>
+    <h2 class="section_title reveal">SOLUTION</h2>
+
+    <div class="horizontal_section">
+      <div class="solution1 reveal">
+        <h3 class="exposure" data-i18n="solution_heading">COSA FACCIAMO</h3>
+        <ul class="service_list">
+          <li class="point">
+            <svg class="point_icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.3" fill="currentColor" stroke="none"/></svg>
+            <span data-i18n="solution_point1">Monitoriamo il tuo nome sul web</span>
+          </li>
+          <li class="point">
+            <svg class="point_icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg>
+            <span data-i18n="solution_point2">Analizziamo ogni contenuto con l'intelligenza artificiale</span>
+          </li>
+          <li class="point">
+            <svg class="point_icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg>
+            <span data-i18n="solution_point3">Individuiamo profili diffamatori e il reale impatto reputazionale</span>
+          </li>
+        </ul>
+      </div>
+      <div class="solution2 reveal">
+        <img src="materials/solution.png" class="solution_img" alt="Dashboard di analisi">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="pricing" id="pricing">
+    <p class="eyebrow reveal">03 — <span data-i18n="pricing_eyebrow">PIANI</span></p>
+    <h2 class="section_title section_title_light reveal" data-i18n="pricing_title">PREZZI</h2>
+    <p class="section_subtitle reveal" data-i18n="pricing_subtitle">Scegli il livello di sorveglianza adatto alla tua esposizione.</p>
+
+    <div class="pricing_grid">
+      <div class="price_card reveal">
+        <h3 class="price_name" data-i18n="plan1_name">Report Singolo</h3>
+        <p class="price_desc" data-i18n="plan1_desc">Analisi puntuale su un singolo cliente, per una valutazione mirata dell'esposizione reputazionale online.</p>
+        <p class="price_value" data-i18n="plan1_price">499€</p>
+        <ul class="price_features">
+          <li data-i18n="plan1_f1">Riassunto dei contenuti</li>
+          <li data-i18n="plan1_f2">Analisi dell'impatto reputazionale</li>
+          <li data-i18n="plan1_f3">Pre-screening diffamatorio</li>
+        </ul>
+        <a href="#contact" class="price_cta" data-i18n="plan_cta">Richiedi info</a>
+      </div>
+
+      <div class="price_card price_card_featured reveal">
+        <p class="price_badge" data-i18n="plan2_badge">Più scelto</p>
+        <h3 class="price_name" data-i18n="plan2_name">Licenza software</h3>
+        <p class="price_desc" data-i18n="plan2_desc">Installa il software per avere totale controllo sul monitoraggio reputazionale dei tuoi clienti.</p>
+        <p class="price_value" data-i18n="plan2_price">€9999/anno</p>
+        <ul class="price_features">
+          <li data-i18n="plan2_f1">Completo accesso al software</li>
+          <li data-i18n="plan2_f2">Report senza limiti</li>
+          <li data-i18n="plan2_f3">Continuo monitoraggio della reputazione</li>
+        </ul>
+        <a href="#contact" class="price_cta" data-i18n="plan_cta">Richiedi info</a>
+      </div>
+
+      <div class="price_card reveal">
+        <h3 class="price_name" data-i18n="plan3_name">Custom</h3>
+        <p class="price_desc" data-i18n="plan3_desc">Per esigenze che vanno oltre i piani standard: monitoraggi ad alta frequenza, più clienti, periodi prolungati o workflow personalizzati.</p>
+        <p class="price_value" data-i18n="plan3_price">Su richiesta</p>
+        <ul class="price_features">
+          <li data-i18n="plan3_f1">Frequenza dei report configurabile</li>
+          <li data-i18n="plan3_f2">Gestione di più clienti o pratiche</li>
+          <li data-i18n="plan3_f3">Servizio costruito sulle tue necessità</li>
+        </ul>
+        <a href="#contact" class="price_cta" data-i18n="plan_cta">Richiedi info</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <p class="eyebrow eyebrow_dark reveal">04 — <span data-i18n="contact_eyebrow">CONTATTI</span></p>
+    <h2 class="section_title reveal">CONTACT</h2>
+    <p class="section_subtitle section_subtitle_dark reveal" data-i18n="contact_subtitle">Parliamone. La tua reputazione non aspetta.</p>
+
+    <div class="contact_grid">
+
+      <div class="contact_info reveal">
+        <div class="info_row">
+          <span class="info_label" data-i18n="contact_email_row_label">Email</span>
+          <span class="info_value"><a href="mailto:info@ormlens.com">info@ormlens.com</a></span>
+        </div>
+        <div class="info_row">
+          <span class="info_label" data-i18n="contact_hours_label">Orari</span>
+          <span class="info_value" data-i18n="contact_hours_value">Lun–Ven, 9:00–18:00</span>
+        </div>
+        <div class="info_row">
+          <span class="info_label" data-i18n="contact_response_label">Tempo di risposta</span>
+          <span class="info_value" data-i18n="contact_response_value">Entro 24 ore lavorative</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <span class="footer_brand">ORM LENS</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
