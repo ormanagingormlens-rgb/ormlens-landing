@@ -14,9 +14,9 @@
     --ink-soft: rgba(18, 20, 28, 0.62);
     --paper-soft: rgba(250, 250, 250, 0.68);
 
-    --font-display: 'Space Grotesk', Verdana, Geneva, Tahoma, sans-serif;
-    --font-body: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
-    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    --font-display: Verdana, Geneva, Tahoma, sans-serif;
+    --font-body: Verdana, Geneva, Tahoma, sans-serif;
+    --font-mono: 'Courier New', monospace;
 
     --nav-h: 72px;
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
