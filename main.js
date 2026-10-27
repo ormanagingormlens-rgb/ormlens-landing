@@ -66,7 +66,7 @@ const translations = {
     contact_response_value: 'Entro 24 ore lavorative',
     contact_privacy_note: 'Scrivendoci, i dati che ci invii verranno trattati come descritto nella',
 
-    footer_copy: '© 2026 ORM Lens. Tutti i diritti riservati.',
+    footer_copy: ' 2026 ORM Lens.',
     footer_privacy: 'Privacy Policy',
 
     privacy_eyebrow: 'INFORMATIVA',
@@ -139,7 +139,7 @@ const translations = {
     contact_response_value: 'Within 24 business hours',
     contact_privacy_note: 'If you write to us, the data you send will be processed as described in our',
 
-    footer_copy: '© 2026 ORM Lens. All rights reserved.',
+    footer_copy: ' 2026 ORM Lens.',
     footer_privacy: 'Privacy Policy',
 
     privacy_eyebrow: 'NOTICE',
