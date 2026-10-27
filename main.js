@@ -30,6 +30,8 @@ const translations = {
     pricing_eyebrow: 'PIANI',
     pricing_title: 'PREZZI',
     pricing_subtitle: 'Scegli il livello di sorveglianza adatto alla tua esposizione.',
+    soon_badge: 'In arrivo',
+    soon_text: 'Il servizio non è ancora disponibile: i prezzi sono indicativi.',
 
     plan1_name: 'Report Singolo',
     plan1_desc: "Analisi puntuale su un singolo cliente, per una valutazione mirata dell'esposizione reputazionale online.",
@@ -62,8 +64,15 @@ const translations = {
     contact_hours_value: 'Lun–Ven, 9:00–18:00',
     contact_response_label: 'Tempo di risposta',
     contact_response_value: 'Entro 24 ore lavorative',
+    contact_privacy_note: 'Scrivendoci, i dati che ci invii verranno trattati come descritto nella',
 
-    footer_copy: '© 2026 ORM Lens. Tutti i diritti riservati.'
+    footer_copy: '© 2026 ORM Lens. Tutti i diritti riservati.',
+    footer_privacy: 'Privacy Policy',
+
+    privacy_eyebrow: 'INFORMATIVA',
+    privacy_updated: 'Ultimo aggiornamento: 27 ottobre 2026',
+    privacy_back: '← Torna al sito',
+    privacy_doc_title: 'Privacy Policy — ORM Lens'
   },
   en: {
     nav_home: 'Home',
@@ -94,6 +103,8 @@ const translations = {
     pricing_eyebrow: 'PLANS',
     pricing_title: 'PRICING',
     pricing_subtitle: 'Choose the level of surveillance that matches your exposure.',
+    soon_badge: 'Coming soon',
+    soon_text: 'The service is not available yet: prices are indicative.',
 
     plan1_name: 'Single Report',
     plan1_desc: 'A one-time analysis for a single client, providing a targeted assessment of their online reputation exposure.',
@@ -126,12 +137,34 @@ const translations = {
     contact_hours_value: 'Mon–Fri, 9am–6pm',
     contact_response_label: 'Response time',
     contact_response_value: 'Within 24 business hours',
+    contact_privacy_note: 'If you write to us, the data you send will be processed as described in our',
 
-    footer_copy: '© 2026 ORM Lens. All rights reserved.'
+    footer_copy: '© 2026 ORM Lens. All rights reserved.',
+    footer_privacy: 'Privacy Policy',
+
+    privacy_eyebrow: 'NOTICE',
+    privacy_updated: 'Last updated: 27 October 2026',
+    privacy_back: '← Back to the site',
+    privacy_doc_title: 'Privacy Policy — ORM Lens'
   }
 }
 
-let lang = 'it'
+/* ---------- Lingua: preferenza salvata solo nel browser (vedi privacy policy, §3.3) ---------- */
+const LANG_KEY = 'ormlens_lang'
+
+function loadLang() {
+  try {
+    const saved = localStorage.getItem(LANG_KEY)
+    if (saved === 'it' || saved === 'en') return saved
+  } catch (e) { /* storage non disponibile: si usa l'italiano */ }
+  return 'it'
+}
+
+function saveLang(value) {
+  try { localStorage.setItem(LANG_KEY, value) } catch (e) { /* ignorato */ }
+}
+
+let lang = loadLang()
 
 function t(key) {
   return translations[lang][key] ?? key
@@ -146,12 +179,22 @@ function applyLang() {
   document.querySelectorAll('.lang_option').forEach((el) => {
     el.classList.toggle('is-active', el.dataset.lang === lang)
   })
+  // Blocchi di testo lunghi (es. privacy policy) scritti direttamente in entrambe le lingue
+  document.querySelectorAll('[data-lang-block]').forEach((el) => {
+    el.hidden = el.dataset.langBlock !== lang
+  })
+  if (document.body.classList.contains('legal_page')) {
+    document.title = t('privacy_doc_title')
+  }
 }
 
 document.getElementById('langSwitch').addEventListener('click', () => {
   lang = lang === 'it' ? 'en' : 'it'
+  saveLang(lang)
   applyLang()
 })
+
+applyLang()
 
 /* ---------- Navbar: sfondo allo scroll ---------- */
 const navbar = document.getElementById('navbar')
